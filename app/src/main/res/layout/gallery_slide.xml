@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/root"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    >
 
-    <app.grapheneos.camera.ui.ZoomableImageView
+    <com.google.android.GoogleCamera.ui.ZoomableImageView
         android:id="@+id/slide_preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

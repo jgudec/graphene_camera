@@ -4,8 +4,8 @@
     android:shape="oval">
 
     <size
-        android:width="84dp"
-        android:height="84dp"/>
+        android:width="62dp"
+        android:height="62dp"/>
 
     <padding
         android:bottom="24dp"
@@ -14,6 +14,6 @@
         android:top="24dp"/>
 
     <stroke
-        android:width="6dp"
+        android:width="4dp"
         android:color="#ffffff"/>
 </shape>

@@ -37,8 +37,8 @@ android {
     buildToolsVersion = "33.0.0"
 
     defaultConfig {
-        applicationId = "app.grapheneos.camera"
-        minSdk = 29
+        applicationId = "com.google.android.GoogleCamera"
+        minSdk = 31
         targetSdk = 33
         versionCode = 47
         versionName = versionCode.toString()
@@ -89,8 +89,8 @@ android {
 }
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.5.0")
-    implementation("com.google.android.material:material:1.6.1")
+
+    implementation("com.google.android.material:material:1.8.0-alpha01")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     val cameraVersion = "1.2.0-beta01"

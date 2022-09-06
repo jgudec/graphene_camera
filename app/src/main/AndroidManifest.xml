@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="app.grapheneos.camera">
+    package="com.google.android.GoogleCamera">
 
     <uses-feature android:name="android.hardware.camera.any"/>
 
@@ -16,7 +16,7 @@
 
 
     <application
-        android:name=".App"
+        android:name="com.google.android.GoogleCamera.App"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/full_backup_content"
         android:icon="@mipmap/ic_launcher"
@@ -30,7 +30,7 @@
 
         <!-- The main activity of the app (supports all modes) -->
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name="com.google.android.GoogleCamera.ui.activities.MainActivity"
             android:taskAffinity=".ui.activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
@@ -49,7 +49,7 @@
         <activity-alias
             android:name=".ui.activities.CameraLauncher"
             android:label="@string/app_name"
-            android:targetActivity=".ui.activities.MainActivity"
+            android:targetActivity="com.google.android.GoogleCamera.ui.activities.MainActivity"
             android:exported="true">
 
             <intent-filter>
@@ -61,7 +61,7 @@
 
         <!-- The main activity of the app (supports all modes) -->
         <activity
-            android:name=".ui.activities.SecureMainActivity"
+            android:name="com.google.android.GoogleCamera.ui.activities.SecureMainActivity"
             android:taskAffinity=".ui.activities.SecureMainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
@@ -81,7 +81,7 @@
         https://developer.android.com/reference/android/provider/MediaStore#INTENT_ACTION_VIDEO_CAMERA
         -->
         <activity
-            android:name=".ui.activities.VideoOnlyActivity"
+            android:name="com.google.android.GoogleCamera.ui.activities.VideoOnlyActivity"
             android:taskAffinity=".ui.activities.VideoOnlyActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
@@ -100,7 +100,7 @@
         https://developer.android.com/reference/android/provider/MediaStore#ACTION_IMAGE_CAPTURE
         -->
         <activity
-            android:name=".ui.activities.CaptureActivity"
+            android:name="com.google.android.GoogleCamera.ui.activities.CaptureActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
             android:screenOrientation="nosensor"
@@ -118,7 +118,7 @@
          https://developer.android.com/reference/android/provider/MediaStore#ACTION_IMAGE_CAPTURE_SECURE
          -->
         <activity
-            android:name=".ui.activities.SecureCaptureActivity"
+            android:name="com.google.android.GoogleCamera.ui.activities.SecureCaptureActivity"
             android:taskAffinity=".ui.activities.SecureCaptureActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
@@ -138,7 +138,7 @@
         https://developer.android.com/reference/android/provider/MediaStore#ACTION_VIDEO_CAPTURE
              (No secure video capture intent is present/defined in Android)-->
         <activity
-            android:name=".ui.activities.VideoCaptureActivity"
+            android:name="com.google.android.GoogleCamera.ui.activities.VideoCaptureActivity"
             android:taskAffinity=".ui.activities.VideoCaptureActivity"
             android:label="@string/video_capture_label"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -155,28 +155,28 @@
         </activity>
 
         <activity
-            android:name=".ui.activities.VideoPlayer"
+            android:name="com.google.android.GoogleCamera.ui.activities.VideoPlayer"
             android:theme="@style/OverlayActionBar"
             android:taskAffinity=".ui.activities.VideoPlayer"
             android:excludeFromRecents="true"
             android:exported="false"/>
 
         <activity
-            android:name=".ui.activities.InAppGallery"
+            android:name="com.google.android.GoogleCamera.ui.activities.InAppGallery"
+            android:theme="@style/OverlayActionBarGallery"
+            android:taskAffinity=".ui.activities.InAppGallery"
+            android:excludeFromRecents="true"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.google.android.GoogleCamera.ui.activities.MoreSettings"
             android:theme="@style/OverlayActionBar"
             android:taskAffinity=".ui.activities.InAppGallery"
             android:excludeFromRecents="true"
             android:exported="false"/>
 
         <activity
-            android:name=".ui.activities.MoreSettings"
-            android:theme="@style/OverlayActionBar"
-            android:taskAffinity=".ui.activities.InAppGallery"
-            android:excludeFromRecents="true"
-            android:exported="false"/>
-
-        <activity
-            android:name=".ui.activities.MoreSettingsSecure"
+            android:name="com.google.android.GoogleCamera.ui.activities.MoreSettingsSecure"
             android:theme="@style/OverlayActionBar"
             android:taskAffinity=".ui.activities.InAppGallery"
             android:excludeFromRecents="true"

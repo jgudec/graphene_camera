@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="qr_result_background">#2E3133</color>
+    <color name="action_bar_background">@android:color/system_neutral2_700</color>
+
 </resources>

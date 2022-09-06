@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<app.grapheneos.camera.ui.SettingsFrameLayout
+<com.google.android.GoogleCamera.ui.SettingsFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root"
@@ -73,6 +73,7 @@
                         android:scaleType="centerCrop"
                         android:background="@drawable/aspect_ratio"
                         android:text="@string/aspect_ratio"
+                        android:textColor="@animator/toggle_button_colors"
                         tools:ignore="SpUsage"/>
 
                 </FrameLayout>
@@ -162,12 +163,14 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/self_illumination"/>
 
-                        <androidx.appcompat.widget.SwitchCompat
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            style="@style/switches"
                             android:id="@+id/self_illumination_switch"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:checked="false"
-                            android:layout_gravity="end"/>
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="@dimen/switch_padding_end"/>
 
                     </LinearLayout>
 
@@ -218,12 +221,14 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/include_audio"/>
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            style="@style/switches"
                             android:id="@+id/include_audio_switch"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="end"
                             android:checked="true"
-                            android:layout_gravity="end"/>
+                            android:layout_marginEnd="@dimen/switch_padding_end"/>
 
                     </LinearLayout>
 
@@ -241,12 +246,14 @@
                             android:layout_gravity="center_vertical"
                             android:text="@string/enable_eis"/>
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            style="@style/switches"
                             android:id="@+id/enable_eis_switch"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="end"
                             android:checked="true"
-                            android:layout_gravity="end"/>
+                            android:layout_marginEnd="@dimen/switch_padding_end"/>
 
                     </LinearLayout>
 
@@ -371,20 +378,20 @@
 
         <TextView
             android:id="@+id/more_settings"
-            android:visibility="gone"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="54dp"
             android:layout_below="@id/settings_dialog"
             android:layout_alignParentEnd="true"
-            android:textColor="@color/white"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/settings_dialog_horizontal_margin"
             android:background="@drawable/settings_bg"
             android:foreground="@drawable/more_settings_bg"
-            android:layout_marginEnd="@dimen/settings_dialog_horizontal_margin"
-            android:layout_marginTop="8dp"
             android:paddingHorizontal="18dp"
-            android:paddingVertical="10dp"
-            android:text="@string/more_settings"/>
+            android:gravity="center"
+            android:text="@string/more_settings"
+            android:textColor="@color/white"
+            android:visibility="visible" />
 
     </RelativeLayout>
 
-</app.grapheneos.camera.ui.SettingsFrameLayout>
+</com.google.android.GoogleCamera.ui.SettingsFrameLayout>

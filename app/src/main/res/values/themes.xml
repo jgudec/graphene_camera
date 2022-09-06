@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.App" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.App" parent="Theme.Material3.DynamicColors.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="colorAccent">@color/selected_option_bg</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
 
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/sans_family</item>
+
+    </style>
+
+    <style name="settings" parent="Theme.Material3.DynamicColors.Light">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:statusBarColor">?attr/colorOnSurface</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="switches" >
+        <item name="track">@drawable/switch_track</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="thumbTint">@color/custom_switch_tint</item>
+        <item name="trackTint">@color/custom_track_tint</item>
     </style>
 
     <style name="ShapeAppearance.Image.PILL" parent="">
@@ -19,11 +39,27 @@
         <item name="android:windowMinWidthMinor">80%</item>
     </style>
 
-    <style name="OverlayActionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="OverlayActionBar" parent="Theme.Material3.DynamicColors.DayNight">
         <item name="android:windowActionModeOverlay">true</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:windowActionBar">true</item>
+        <item name="statusBarBackground">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">?attr/colorOnSurface</item>
 
+        <!-- set the height of Action Bar . -->
+        <item name="actionBarSize">55dp</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="windowActionBar">true</item>
+    </style>
+
+    <style name="OverlayActionBarGallery" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="statusBarBackground">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="windowActionBarOverlay">true</item>
         <item name="windowActionBar">true</item>
